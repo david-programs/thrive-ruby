@@ -1,8 +1,8 @@
 module FileOutput
-  def self.create_output_file(companies)
+  def self.create_output_file(companies, output_path)
     companies = companies.sort_by(&:id)
 
-    File.open('./output/output.txt', 'w') do |file|
+    File.open(output_path, 'w') do |file|
       companies.each do |company|
         next if company.active_users.empty?
 
