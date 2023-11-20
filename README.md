@@ -3,7 +3,9 @@
 ### Installation
 This program only needs one gem called 'json'. You can ensure it's there by running the following command:
 
-```bundle install```
+```
+bundle install
+```
 
 ### Running the program
 
@@ -11,10 +13,14 @@ This program only needs one gem called 'json'. You can ensure it's there by runn
 
 2. Run the command:
 
-```bundle exec ruby challenge.rb```
+```
+bundle exec ruby challenge.rb
+```
 
 Or if you don't have bundler:
 
-```ruby challenge.rb```
+```
+ruby challenge.rb
+```
 
 3. The output will be in `/output/output.txt`
