@@ -1,7 +1,7 @@
 # thrive-ruby
 
 ### Installation
-This program uses 'json' and 'optparse' gems which should be present on most ruby distributions. You can ensure it's there by running the following command:
+This program use standard libraries that are default in most ruby distributions. You can ensure dependencieis are installed by running the following command:
 
 ```
 bundle install
@@ -32,4 +32,10 @@ Use `bundle exec ruby challenge.rb --help for more details.
 3. The output will default to `/output/output.txt` unless specified with `-o` flag. For example:
 ```
 bundle exec challenge.rb -o other_output_example.txt
+```
+
+### Tests
+Some basic unit tests are available with
+```
+bundle exec rake test
 ```

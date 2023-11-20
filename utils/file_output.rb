@@ -1,3 +1,5 @@
+# Creates the templated output defined by example_output.txt
+
 module FileOutput
   def self.create_output_file(companies, output_path)
     companies = companies.sort_by(&:id)

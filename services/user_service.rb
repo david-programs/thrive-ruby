@@ -1,3 +1,5 @@
+# Provides user based business logic
+
 class UserService
   def self.top_up_users(users)
     users.filter(&:active_status).each do |user|

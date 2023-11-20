@@ -2,6 +2,8 @@ require_relative '../models/company'
 require_relative '../models/user'
 require 'set'
 
+# Reads JSON files and converts them into models. References between models aren't formed until ReferenceBuilder is invoked.
+
 module FileParser
   def self.company_by_id(file_path)
     company_by_id = File.read(file_path)
