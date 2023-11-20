@@ -43,3 +43,5 @@ UserService.top_up_users(users)
 
 # Print results into output file
 FileOutput.create_output_file(company_by_id.values, file_paths.output_path)
+
+puts 'Success'

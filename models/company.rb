@@ -10,6 +10,8 @@ class Company
     @email_status = params.fetch(:email_status, nil)
     @users = []
     @recent_top_ups = 0
+
+    validate
   end
 
   def add_user(user)
@@ -22,5 +24,12 @@ class Company
 
   def active_users
     @users.filter(&:active_status)
+  end
+
+  def validate
+    raise 'Missing id for company' if @id.nil?
+    raise 'Missing name for company' if @name.nil? || @name.empty?
+    raise 'Missing top_up for company' if @top_up.nil?
+    raise 'Missing email_status for company' if @email_status.nil?
   end
 end

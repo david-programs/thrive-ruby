@@ -14,6 +14,8 @@ class User
     @active_status = params.fetch(:active_status, nil)
     @tokens = params.fetch(:tokens, nil)
     @token_history = [@tokens]
+
+    validate
   end
 
   def add_tokens(amount)
@@ -31,5 +33,16 @@ class User
 
   def previous_balance
     @token_history.last
+  end
+
+  def validate
+    raise 'Missing id for company' if @id.nil?
+    raise 'Missing first_name for company' if @first_name.nil? || @first_name.empty?
+    raise 'Missing last_name for company' if @last_name.nil? || @last_name.empty?
+    raise 'Missing email for company' if @email.nil? || @email.empty?
+    raise 'Missing company_id for company' if @company_id.nil?
+    raise 'Missing email_status for company' if @email_status.nil?
+    raise 'Missing active_status for company' if @active_status.nil?
+    raise 'Missing tokens for company' if @tokens.nil?
   end
 end
